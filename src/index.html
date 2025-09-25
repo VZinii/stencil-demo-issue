@@ -9,6 +9,22 @@
     <script nomodule src="/build/my-stencil-project.js"></script>
   </head>
   <body>
-    <my-component first="Stencil" middle="'Don't call me a framework'" last="JS"></my-component>
+    <my-component href="test">Example</my-component>
   </body>
+  <script>
+
+    window.addEventListener('click', () => {
+
+      const myComponent = document.querySelector('my-component');
+
+      if (myComponent.href){
+        myComponent.href = undefined;
+      }
+      else {
+        myComponent.href = 'anything';
+      }
+
+    });
+
+  </script>
 </html>
